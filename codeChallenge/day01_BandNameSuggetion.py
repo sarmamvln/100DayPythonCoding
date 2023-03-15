@@ -1,5 +1,5 @@
 #Day 01 Band name suggetion.
-class bandName():
+class bandName:
 
     def suggetion():
 
