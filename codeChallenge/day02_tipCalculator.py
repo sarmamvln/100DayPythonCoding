@@ -12,11 +12,13 @@ class tipCalculator:
 
 
         final_amount = total_bill + (total_bill * int(tip_percent) / 100);
-        print("Each person should pay: $", round(final_amount / number_of_people,2));
+        #print("Each person should pay: $", round(final_amount / number_of_people,2));
+        #limiting the number of digits to 2 in case of 0
+        print("Each person should pay: $", "{:.2f}".format(final_amount / number_of_people));
 
     def totalbill():
         total_bill = input("What was total bill? $");
-        total_bill_amount = int(total_bill.strip('$'));
+        total_bill_amount = float(total_bill.strip('$'));
 
         number_of_people = input("How many people to split the bill? ");
         # Number of people validation
