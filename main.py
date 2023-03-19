@@ -6,6 +6,7 @@ import codeChallenge.day01_BandNameSuggetion as d1;
 import codeChallenge.day02_tipCalculator as d2;
 import codeChallenge.day03_treasureIslandGame as d3;
 import codeChallenge.day04_RockPaperScissorGamewithComputer as d4;
+import codeChallenge.day05_PasswordGenerator as d5;
 
 
 def print_hi(name):
@@ -16,14 +17,16 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi;
-    print("========================================")
+    #print("========================================")
     #d1.bandName.suggetion();
-    print("========================================")
+    #print("========================================")
     #d2.tipCalculator.totalbill();
-    print("========================================")
+    #print("========================================")
     #d3.TreasureIsland.gameFlow();
-    print("========================================")
-    d4.RockPaperScissorGame.game();
-    print("========================================")
+    #print("========================================")
+    #d4.RockPaperScissorGame.game();
+    #print("========================================")
+    d5.passwordGenerator.pwdGenerator()
+    #print("========================================")
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
