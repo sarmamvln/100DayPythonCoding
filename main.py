@@ -8,6 +8,7 @@ import codeChallenge.day03_treasureIslandGame as d3;
 import codeChallenge.day04_RockPaperScissorGamewithComputer as d4;
 import codeChallenge.day05_PasswordGenerator as d5;
 import codeChallenge.day07_HangMan_Game as d7;
+import codeChallenge.day08_CeagarCipher as d8;
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -28,7 +29,8 @@ if __name__ == '__main__':
     #print("========================================")
     #d5.passwordGenerator.pwdGenerator()
     #print("========================================")
-    d7.HangManGame.user_game_start(game_word="tornado")
+    #d7.HangManGame.user_game_start(game_word="tornado")
     #print("========================================")
-
+    d8.ceagerCipher.userMessage();
+    #print("========================================")
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
