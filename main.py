@@ -9,6 +9,8 @@ import codeChallenge.day04_RockPaperScissorGamewithComputer as d4;
 import codeChallenge.day05_PasswordGenerator as d5;
 import codeChallenge.day07_HangMan_Game as d7;
 import codeChallenge.day08_CeagarCipher as d8;
+import codeChallenge.day09_SilentAuction as d9;
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -31,6 +33,10 @@ if __name__ == '__main__':
     #print("========================================")
     #d7.HangManGame.user_game_start(game_word="tornado")
     #print("========================================")
-    d8.ceagerCipher.userMessage();
+    #d8.ceagerCipher.userMessage();
     #print("========================================")
+    d9.silentAuction.aution();
+    # print("========================================")
+
+
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
