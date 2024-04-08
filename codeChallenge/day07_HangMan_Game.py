@@ -11,12 +11,12 @@ class HangManGame:
              _                                             
             | |                                            
             | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
-            | '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+            | '_ \ \/ _` | '_ \ \/ _` | '_ ` _ \ \/ _` | '_ \ 
             | | | | (_| | | | | (_| | | | | | | (_| | | | |
             |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                                __/ |                      
-                               |___/           
-            ''' )
+                                __\/ |                      
+                               |___\/           
+            ''' );
 
     def word_generator():
         word_list=["beautiful", "onion orange", "coders Logins", "not"]
@@ -72,7 +72,7 @@ class HangManGame:
               |
         ========='''
         ]
-        if flag_counter!=len(hangman_art):
+        if (flag_counter!=len(hangman_art)):
             print(hangman_art[flag_counter-1]);
             flag = True
         else:

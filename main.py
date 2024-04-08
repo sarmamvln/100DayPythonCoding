@@ -35,7 +35,7 @@ if __name__ == '__main__':
     #print("========================================")
     #d8.ceagerCipher.userMessage();
     #print("========================================")
-    d9.silentAuction.aution();
+    #d9.silentAuction.aution();
     # print("========================================")
 
 
