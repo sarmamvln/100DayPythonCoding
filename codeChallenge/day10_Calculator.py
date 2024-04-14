@@ -83,48 +83,45 @@ class Calc:
                         lastval.append(c.tanf(lastval))
                         print(f"The Tan of values {lastval[-2]} is: ", lastval[-1]);
 
-
-
-
     def addt(a):
         if(len(a)<=2):
-            return int(a[0])+int(a[1]);
+            return float(a[0])+float(a[1]);
         else:
-           return int(a[-1])+int(a[-2]);
+           return float(a[-1])+float(a[-2]);
 
     def subt(a):
         if(len(a)<=2):
-            return int(a[0])-int(a[1]);
+            return float(a[0])-float(a[1]);
         else:
-           return int(a[-2])-int(a[-1]);
+           return float(a[-2])-float(a[-1]);
 
     def mult(a):
-        if(int(a[-1])==0):
+        if(float(a[-1])==0):
             return 0;
         elif(len(a)<=2):
-            return int(a[0])*int(a[1]);
+            return float(a[0])*float(a[1]);
         else:
-           return int(a[-2])*int(a[-1]);
+           return float(a[-2])*float(a[-1]);
     def divt(a):
-        if(int(a[-1])==0):
+        if(float(a[-1])==0):
             return 0;
         elif(len(a)<=2):
-            return int(a[0])/int(a[1]);
+            return float(a[0])/float(a[1]);
         else:
-           return int(a[-2])/int(a[-1]);
+           return float(a[-2])/float(a[-1]);
     def rut(rootnum):
         if(rootnum[-1]!='exit'):
-            return sqrt(int(rootnum[-1]));
+            return sqrt(float(rootnum[-1]));
         elif(rootnum[-1]<0):
             return 'i';
         else:
             return False;
     def sinf(a):
-        return sin(int(a[-1]));
+        return sin(float(a[-1]));
     def cosf(a):
-        return cos(int(a[-1]));
+        return cos(float(a[-1]));
     def tanf(a):
-        return tan(int(a[-1]));
+        return tan(float(a[-1]));
 
 
 c=Calc;
