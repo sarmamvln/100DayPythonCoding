@@ -38,6 +38,7 @@ class Calc:
         lastval=[];
         lastval.append(input("Enter the number: "));
         while (flag):
+            clear();
             option = input(
                 f"Select the operation corresponding number you want to perform:\n1.Addition (+)\n2.Subtraction (-)\n3.Multiplication (x)\n4.Division (/)\n5.Root\n6.Trignometry\n-------------------\n:      ");
             if(lastval[-1]=='exit'):
@@ -125,5 +126,5 @@ class Calc:
 
 
 c=Calc;
-#c.calci();
+c.calci();
 
