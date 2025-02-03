@@ -10,7 +10,10 @@
 #import codeChallenge.day07_HangMan_Game as d7;
 #import codeChallenge.day08_CeagarCipher as d8;
 #import codeChallenge.day09_SilentAuction as d9;
-import codeChallenge.day10_Calculator as d10;
+#import codeChallenge.day10_Calculator as d10;
+#import codeChallenge.day11_BlackjackCapstoneProject as d11;
+#import codeChallenge.day12_GuesstheNumberGame as d12;
+
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -38,6 +41,10 @@ if __name__ == '__main__':
     #d9.silentAuction.aution();
     # print("========================================")
     #d10.Calc.calci();
+    # print("========================================")
+    #d11.BlackJack();
+    # print("========================================")
+    # d12.GuessNumber().gameStarter();
     # print("========================================")
 
 
