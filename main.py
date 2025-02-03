@@ -13,7 +13,7 @@
 #import codeChallenge.day10_Calculator as d10;
 #import codeChallenge.day11_BlackjackCapstoneProject as d11;
 #import codeChallenge.day12_GuesstheNumberGame as d12;
-
+#import codeChallenge.day14_HigherLowerGame as d14;
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -39,13 +39,15 @@ if __name__ == '__main__':
     #d8.ceagerCipher.userMessage();
     #print("========================================")
     #d9.silentAuction.aution();
-    # print("========================================")
+    #print("========================================")
     #d10.Calc.calci();
-    # print("========================================")
+    #print("========================================")
     #d11.BlackJack();
-    # print("========================================")
-    # d12.GuessNumber().gameStarter();
-    # print("========================================")
+    #print("========================================")
+    #d12.GuessNumber().gameStarter();
+    #print("========================================")
+    #d14.HigherLower().gameStarter();
+    #print("========================================")
 
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
