@@ -25,7 +25,11 @@ class GuessNumber:
     def gameLogic(self, choiceValue):
         choice = gamechoice[gameType[choiceValue]];
         #userGuessNumber=;
-        userGuessNumber = int(input(f"You have {choice} remaining to guess the NUmber: "));
+        try:
+            userGuessNumber = int(input(f"You have {choice} remaining to guess the NUmber: "));
+        except ValueError:
+            print("should be a number, try again");
+            userGuessNumber = int(input(f"You have {choice} remaining to guess the NUmber: "));
         while userGuessNumber != _guessNumber and choice >0:
             choice -= 1;
             if (userGuessNumber == _guessNumber):
