@@ -100,10 +100,11 @@ class CoffeeMachine:
     machineMaxCapacity= {"water": 1000, "milk": 1000, "coffee": 500}
     currentIngrendiends = machineMaxCapacity
     machineIngredientsCapacityUnits = {"water": "ml", "milk": "ml", "coffee": "gms"}
-    priceDenomination= {"penny":0.01,"nickel":0.05, "dime": 0.10, "quarter": 0.25}
+    priceDenomination= {"penny":0.01,"nickel":0.05, "dime": 0.10, "quarter": 0.25, "dollar": 1}
     machineStatus= "on"
     quantitysaled= {"espresso": 0, "latte":0, "capaccino":0}
-
+    saledprice = {"espresso": 0, "latte":0, "capaccino": 0}
+    userCurrency= {"penny":0,"nickel":0, "dime": 0, "quarter": 0, "dollar": 0}
 
     def game_img(self):
          #img= Image.open("./imgs/day15_CoffeeMachine/coffeemachine_.jpg");
@@ -125,9 +126,36 @@ class CoffeeMachine:
             """
          return img2;
 
+    def totalMoneyafterSales(self):
+        for each in self.saledprice.keys():
+            self.saledprice[each] += self.MENU[each]["cost"]*self.quantitysaled[each]
+            print(f" {each}:  $ {self.saledprice[each]}")
+
+    def priceHandler(self, drinkCost):
+        currentuserprice=0
+        print(f"The cost of selected drink is ${drinkCost} ");
+        print(f"Accepted denomination are {self.priceDenomination.keys()}")
+        for key in self.priceDenomination.keys():
+            self.userCurrency[key]= int(input(f"Enter number of {key.upper()} coins : "))
+            currentuserprice+= self.priceDenomination[key]*self.userCurrency[key]
+        if(currentuserprice>=drinkCost) :
+            print(f"You entered total amount is ${currentuserprice} and required drink price is ${drinkCost}, You get refund of ${currentuserprice-drinkCost}.Enjoy your coffeee")
+
+        else:
+            print(f"You entered amount is ${currentuserprice} and required drink price is ${drinkCost},  less by ${drinkCost-currentuserprice}")
+            self.priceHandler(drinkCost)
+
     def refillIngredients(self):
         self.machineStatus= "off"
-        print("Total collected money")
+        print("Total collected money summary by each product:  ")
+        self.totalMoneyafterSales()
+
+
+        if(self.refill_flag):
+            self.currentIngrendiends=self.machineMaxCapacity;
+            print("Ingredients refilled successlly");
+            self.refill_flag=False
+
 
 
     def ingredientsChecker(self, menuId):
@@ -171,10 +199,6 @@ class CoffeeMachine:
 
 
 
-    def priceHandler(self, drinkCost):
-        print(f"The cost of selected drink is ${drinkCost} ");
-        userCurrency= input("Enter you amount: ")
-
     def drinkSelectionHandler(self, menuId):
         self.ingredientsChecker(menuId);
 
@@ -201,6 +225,8 @@ class CoffeeMachine:
                 print("\nBelow is current Ingredients status of the Machine ")
                 for each in self.currentIngrendiends.keys():
                     print(f" {each}:  {self.currentIngrendiends[each]} {self.machineIngredientsCapacityUnits[each]}")
+            else:
+                self.machineStatus= "pause"
 
 
 
