@@ -397,5 +397,5 @@ class HigherLower:
 
 
 
-hl= HigherLower()
-hl.gameStarter()
+# hl= HigherLower()
+# hl.gameStarter()
