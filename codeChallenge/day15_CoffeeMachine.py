@@ -231,5 +231,5 @@ class CoffeeMachine:
 
 
 
-cm= CoffeeMachine();
-cm.coffeeMachine();
+# cm= CoffeeMachine();
+# cm.coffeeMachine();

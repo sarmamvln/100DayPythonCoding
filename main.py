@@ -14,6 +14,7 @@
 #import codeChallenge.day11_BlackjackCapstoneProject as d11;
 #import codeChallenge.day12_GuesstheNumberGame as d12;
 #import codeChallenge.day14_HigherLowerGame as d14;
+#import codeChallenge.day15_CoffeeMachine as d15;
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -22,7 +23,7 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi;
+    print_hi
     #print("========================================")
     #d1.bandName.suggetion();
     #print("========================================")
@@ -47,6 +48,10 @@ if __name__ == '__main__':
     #d12.GuessNumber().gameStarter();
     #print("========================================")
     #d14.HigherLower().gameStarter();
+    #print("========================================")
+    #d15.CoffeeMachine().coffeeMachine()
+    #print("========================================")
+
     #print("========================================")
 
 
