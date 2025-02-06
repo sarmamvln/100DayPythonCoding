@@ -61,6 +61,7 @@
 ############### Coffee Machine #####################
 import random
 from replit import clear;
+from prettytable import PrettyTable;
 from PIL import Image;
 
 
@@ -106,6 +107,8 @@ class CoffeeMachine:
     saledprice = {"espresso": 0, "latte":0, "capaccino": 0}
     userCurrency= {"penny":0,"nickel":0, "dime": 0, "quarter": 0, "dollar": 0}
 
+    table= PrettyTable();
+
     def game_img(self):
          #img= Image.open("./imgs/day15_CoffeeMachine/coffeemachine_.jpg");
          img2= """
@@ -127,9 +130,16 @@ class CoffeeMachine:
          return img2;
 
     def totalMoneyafterSales(self):
+        table = PrettyTable();
         for each in self.saledprice.keys():
             self.saledprice[each] += self.MENU[each]["cost"]*self.quantitysaled[each]
-            print(f" {each}:  $ {self.saledprice[each]}")
+
+            #print(f" {each}:  $ {self.saledprice[each]}")
+        table.field_names = self.saledprice.keys()
+        table.add_rows([
+           self.saledprice.values()
+        ])
+        print(table)
 
     def priceHandler(self, drinkCost):
         currentuserprice=0
@@ -222,14 +232,20 @@ class CoffeeMachine:
             elif(drinkSelection.lower()=="capaccino" or drinkSelection=='3'):
                 self.drinkSelectionHandler("capaccino")
             elif(drinkSelection.lower()=="report"):
+                table = PrettyTable();
                 print("\nBelow is current Ingredients status of the Machine ")
-                for each in self.currentIngrendiends.keys():
-                    print(f" {each}:  {self.currentIngrendiends[each]} {self.machineIngredientsCapacityUnits[each]}")
+                # for each in self.currentIngrendiends.keys():
+                #     print(f" {each}:  {self.currentIngrendiends[each]} {self.machineIngredientsCapacityUnits[each]}")
+                table.field_names = self.currentIngrendiends.keys()
+                table.add_rows([
+                    self.currentIngrendiends.values(), self.machineIngredientsCapacityUnits.values()
+                ])
+                print(table)
             else:
                 self.machineStatus= "pause"
 
 
 
 
-# cm= CoffeeMachine();
-# cm.coffeeMachine();
+cm= CoffeeMachine();
+cm.coffeeMachine();
