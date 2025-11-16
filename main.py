@@ -15,6 +15,7 @@
 #import codeChallenge.day12_GuesstheNumberGame as d12;
 #import codeChallenge.day14_HigherLowerGame as d14;
 #import codeChallenge.day15_CoffeeMachine as d15;
+#import codeChallenge.day19_TurtleRacing.turtle_racinggame as d19;
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -51,6 +52,9 @@ if __name__ == '__main__':
     #print("========================================")
     #d15.CoffeeMachine().coffeeMachine()
     #print("========================================")
+    #print("========================================")
+    # d19
+
 
     #print("========================================")
 
